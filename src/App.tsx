@@ -235,7 +235,7 @@ function App() {
         <div className="container mx-auto px-6">
           <div className="flex items-center justify-between h-16">
             <a
-              href="/resume.pdf"
+              href=""
               target="_blank"
               rel="noopener noreferrer"
               className="font-bold text-xl bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent hover:from-purple-600 hover:to-blue-500 transition-all duration-300 flex items-center gap-2"
@@ -453,91 +453,7 @@ function App() {
        
  
 
-       <section id="education" className="py-20 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-tr from-emerald-500/8 via-teal-500/12 to-green-500/8"></div>
-        
-         <div className="absolute top-0 left-0 w-full h-full">
-          <div className="absolute top-1/4 right-1/4 w-32 h-32 border-2 border-emerald-300/30 rounded-full animate-spin-slow"></div>
-          <div className="absolute bottom-1/3 left-1/5 w-24 h-24 border-2 border-teal-300/30 rounded-full animate-bounce-slow"></div>
-          <div className="absolute top-1/2 left-1/2 w-16 h-16 border-2 border-green-300/30 rounded-full animate-pulse-slow"></div>
-          <div className="absolute top-1/6 left-1/3 w-2 h-2 bg-emerald-400 rounded-full animate-ping"></div>
-          <div className="absolute bottom-1/4 right-1/5 w-3 h-3 bg-teal-400 rounded-full animate-ping animation-delay-1000"></div>
-          <div className="absolute top-3/4 left-1/6 w-1 h-1 bg-green-400 rounded-full animate-ping animation-delay-2000"></div>
-        </div>
-        
-        <div className="container mx-auto px-6">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-4xl font-bold text-center mb-16">
-              <span className="bg-gradient-to-r from-emerald-500 via-teal-500 to-green-500 bg-clip-text text-transparent">
-                Education
-              </span>
-            </h2>
-            
-            <div className="grid gap-8">
-              {education.map((edu, index) => (
-                <div
-                  key={edu.degree}
-                  className={`group relative rounded-2xl shadow-xl border backdrop-blur-sm transition-all duration-500 hover:scale-[1.02] ${
-                    index % 2 === 0 ? 'animate-slide-in-left' : 'animate-slide-in-right'
-                  } ${cardClasses}`}
-                  style={{ animationDelay: `${index * 0.2}s` }}
-                >
-                   <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-emerald-500/20 via-teal-500/20 to-green-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 -z-10 blur-xl"></div>
-                  
-                   <div className="absolute top-0 right-0 w-16 h-16 bg-gradient-to-bl from-emerald-400/20 to-transparent rounded-tr-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                  
-                  <div className="relative p-8">
-                    <div className="flex flex-col md:flex-row gap-6">
-                       <div className="flex-shrink-0">
-                        <div className="w-20 h-20 rounded-full overflow-hidden shadow-lg border-4 border-emerald-400/30 group-hover:border-emerald-400/60 transition-all duration-300">
-                          <img
-                            src={edu.logo}
-                            alt={edu.institution}
-                            className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
-                          />
-                        </div>
-                      </div>
-                      
-                       <div className="flex-1">
-                        <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-4">
-                          <div>
-                            <h3 className="text-2xl font-bold mb-2 group-hover:text-emerald-500 transition-colors duration-300">
-                              {edu.degree}
-                            </h3>
-                            <h4 className="text-lg font-semibold bg-gradient-to-r from-blue-500 to-purple-600 bg-clip-text text-transparent group-hover:from-emerald-500 group-hover:to-teal-500 transition-all duration-300">
-                              {edu.institution}
-                            </h4>
-                            <p className="text-sm opacity-70 mt-1">{edu.location}</p>
-                          </div>
-                          <div className="mt-4 md:mt-0">
-                            <span className={`inline-flex items-center px-4 py-2 rounded-full text-sm font-semibold shadow-lg backdrop-blur-sm border transition-all duration-300 group-hover:scale-105 ${
-                              isDarkMode 
-                                ? 'bg-gradient-to-r from-slate-700/80 to-slate-600/80 text-emerald-400 border-slate-500 group-hover:from-emerald-500/20 group-hover:to-teal-500/20 group-hover:border-emerald-400' 
-                                : 'bg-gradient-to-r from-emerald-50/80 to-teal-50/80 text-emerald-700 border-emerald-200 group-hover:from-emerald-100/80 group-hover:to-teal-100/80 group-hover:border-emerald-400'
-                            }`}>
-                              <div className="w-2 h-2 bg-emerald-400 rounded-full mr-2 animate-pulse"></div>
-                              {edu.period}
-                            </span>
-                          </div>
-                        </div>
-                        
-                         <p className="text-lg leading-relaxed opacity-90 group-hover:opacity-100 transition-all duration-300 mb-4">
-                        
-                        </p>
-                        
-                   
-                      </div>
-                    </div>
-                    
-                     <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-emerald-500/5 via-teal-500/5 to-green-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
+       
 
        <section id="skills" className={`py-20 relative overflow-hidden ${isDarkMode ? 'bg-slate-800/50' : 'bg-gray-100'}`}>
         <div className="absolute inset-0 bg-gradient-to-bl from-orange-500/5 via-red-500/8 to-pink-500/5"></div>

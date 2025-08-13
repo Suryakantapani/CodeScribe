@@ -20,7 +20,8 @@ import {
   Wrench,
   FolderOpen,
   Briefcase,
-  MessageCircle
+  MessageCircle,
+  
 } from 'lucide-react';
 
 function App() {
@@ -364,8 +365,7 @@ Suryakanta Pani        {/* Sparkles */}
       <div className="flex flex-col sm:flex-row gap-4 justify-center">
         <button
           onClick={() => scrollToSection("projects")}
-          className="px-8 py-3 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-purple-600 hover:to-blue-600 rounded-lg font-semibold transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
-        >
+          className="px-8 py-3 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-purple-600 hover:to-blue-600 rounded-lg font-semibold transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
           View My Work
         </button>
         <button
@@ -388,81 +388,66 @@ Suryakanta Pani        {/* Sparkles */}
   </div>
 </section>
 
-       <section id="about" className="py-20 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-emerald-500/5 via-teal-500/10 to-green-500/5"></div>
-        <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-emerald-400 via-teal-400 to-green-400 animate-shimmer"></div>
-        <div className="container mx-auto px-6">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-4xl font-bold text-center mb-16">About Me</h2>
-            <div className="grid md:grid-cols-2 gap-12 items-center">
-              <div>
-                <img
-                  src="public/hari.jpeg"
-                  alt="Profile"
-                  className="w-full h-96 object-cover rounded-2xl shadow-2xl"
-                />
-              </div>
-              <div>
-                <h3 className="text-2xl font-semibold mb-6">Passionate Developer and Problem Slover</h3>
-                <p className="text-lg mb-6 opacity-90">
-                A passionate and curious individual with a drive to build, learn, and solve real-world problems through technology.
-                I enjoy exploring new ideas, collaborating on meaningful projects, and continuously improving my skills.
-                </p>
-                 <div className="mb-8">
-                  <div className="flex items-center gap-4 mb-2">
-                    <Mail size={20} className="text-blue-500" />
-                    <span className="text-lg font-medium">suryakantapani2004@gmail.com</span>
-                    <button
-                      onClick={copyEmail}
-                      className={`flex items-center gap-2 px-3 py-1.5 rounded-lg text-sm font-medium transition-all duration-200 ${
-                        emailCopied
-                          ? 'bg-green-500 text-white'
-                          : isDarkMode 
-                            ? 'bg-slate-700 hover:bg-slate-600 text-blue-400' 
-                            : 'bg-blue-50 hover:bg-blue-100 text-blue-700'
-                      }`}
-                    >
-                      {emailCopied ? (
-                        <>
-                          <Check size={14} />
-                          Copied!
-                        </>
-                      ) : (
-                        <>
-                          <Copy size={14} />
-                          Copy Email
-                        </>
-                      )}
-                    </button>
-                  </div>
-                  <a
-                    href="mailto:suryakantapani2004@gmail.com"
-                    className="inline-flex items-center gap-2 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium transition-colors duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
-                  >
-                    <Mail size={16} />
-                    Shoot Email
-                  </a>
-                </div>
-                
-                <div className="flex flex-wrap gap-3">
-                  {['React', 'TypeScript', 'Node.js', 'Python', 'AWS', 'Figma'].map((tech) => (
-                    <span
-                      key={tech}
-                      className={`px-4 py-2 rounded-full text-sm font-medium ${
-                        isDarkMode 
-                          ? 'bg-slate-800 text-blue-400' 
-                          : 'bg-blue-50 text-blue-700'
-                      }`}
-                    >
-                      {tech}
-                    </span>
-                  ))}
-                </div>
-              </div>
-            </div>
+<section id="about" className="py-20 relative overflow-hidden">
+  <div className="absolute inset-0 bg-gradient-to-r from-emerald-500/5 via-teal-500/10 to-green-500/5"></div>
+  <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-emerald-400 via-teal-400 to-green-400 animate-shimmer"></div>
+  <div className="container mx-auto px-6">
+    <div className="max-w-4xl mx-auto">
+      <h2 className="text-4xl font-bold text-center mb-16">About Me</h2>
+      <div className="grid md:grid-cols-2 gap-12 items-center">
+        
+        {/* Profile Image */}
+        <div>
+          <img
+            src="public/hari.jpeg"
+            alt="Profile"
+            className="w-full h-96 object-cover rounded-2xl shadow-2xl"
+          />
+        </div>
+
+        {/* About Content */}
+        <div>
+          <h3 className="text-2xl font-semibold mb-6">
+            Passionate Developer and Problem Solver
+          </h3>
+          <p className="text-lg mb-6 opacity-90">
+            A passionate and curious individual with a drive to build, learn, and solve
+            real-world problems through technology. I enjoy exploring new ideas,
+            collaborating on meaningful projects, and continuously improving my skills.
+          </p>
+
+          {/* Shoot Email */}
+          <div className="mb-8 flex items-center gap-4">
+              <a
+              href="mailto:suryakantapani2004@gmail.com"
+              className="inline-flex items-center gap-2 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium transition-colors duration-200 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+              <Mail size={16} />
+              Shoot Email
+            </a>
+          </div>
+
+          {/* Skills */}
+          <div className="flex flex-wrap gap-3">
+            {["React", "TypeScript", "Node.js", "Python", "AWS", "Figma"].map(
+              (tech) => (
+                <span
+                  key={tech}
+                  className={`px-4 py-2 rounded-full text-sm font-medium ${
+                    isDarkMode
+                      ? "bg-slate-800 text-blue-400"
+                      : "bg-blue-50 text-blue-700"
+                  }`}
+                >
+                  {tech}
+                </span>
+              )
+            )}
           </div>
         </div>
-      </section>
+      </div>
+    </div>
+  </div>
+</section>
        
  
 

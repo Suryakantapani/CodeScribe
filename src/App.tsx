@@ -335,8 +335,7 @@ function App() {
     <div className="max-w-4xl mx-auto">
       {/* Heading with shimmer + sparkles */}
       <h1 className="relative text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-blue-500 via-purple-500 to-cyan-500 bg-clip-text text-transparent shimmer-animation">
-        Blockchain Developer
-        {/* Sparkles */}
+Suryakanta Pani        {/* Sparkles */}
         <span className="absolute inset-0 pointer-events-none">
           {Array.from({ length: 12 }).map((_, i) => (
             <span
